@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AgentFlow Control Plane UI & Orchestration Engine 🚀
 
-## Getting Started
+AgentFlow is a Visual No-Code Multi-Agent Control Plane Framework designed to orchestrate, monitor, and visualize autonomous agent pipelines in real-time. Built as a core infrastructure skeleton for **Sastra.co**, this system enables seamless configuration and telemetry tracking of complex multi-agent architectures through an intuitive drag-and-drop orchestration topology graph.
 
-First, run the development server:
+---
 
+## 🛠️ Architecture Blueprint
+
+The framework is split into two highly decoupled components that communicate seamlessly over local gateways:
+
+1. **Visual Management Console (Frontend):** A high-performance dashboard built with **Next.js** and **React Flow** that visualizes agent data traversal, tracks telemetry metrics (token speeds, avg latency, operational costs), and handles structural pipeline maps.
+2. **Control Plane Gateway (Backend):** A lightweight **Express.js** and **Node.js** micro-service that manages core routing infrastructure, request guardrails, and state persistence configuration parameters.
+
+---
+
+## 🛡️ Key Features
+
+- **Visual Orchestration Topology:** Interactive graph rendering nodes like API Gateways, Routing Agents, Guardrail Validators, and Final Output streams.
+- **Real-Time Telemetry Stream:** A live execution log pane monitoring model invocation, context injections, and validation states.
+- **Resilient Embedded Persistence:** Powered by an in-memory embedded data store (`nedb-promises`), allowing 100% functionality and state retention in local environments with zero external database dependencies or internet network blocks.
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to spin up the complete infrastructure locally on your machine.
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your system.
+
+### 📦 1. Backend Setup
+
+Go into the backend module directory and install the dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+cd ai-agent-orchestrator/backend
+npm install
